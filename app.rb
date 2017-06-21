@@ -23,10 +23,11 @@ class Battle < Sinatra::Base
     erb :play
   end
 
-  get '/attack' do
+  get '/attack1' do
     @player1 = session[:player1]
     @player2 = session[:player2]
-    erb :attack
+    session[:player1_votes] -= 10
+    erb :attack1
   end
 
 

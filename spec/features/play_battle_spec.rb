@@ -15,11 +15,17 @@ describe "play.erb" do
   end
 
   feature 'Attacking' do
-    scenario 'Reducing player 2 votes by 10' do
+    scenario 'Player 2 attacking Player 1' do
       sign_in_and_play
       click_button "High five!"
-      expect(page).to have_content("Misses a high five!")
+      expect(page).to have_content("misses a high five!")
     end
   end
 
+  feature 'Reducing player 1 votes' do
+    scenario 'Player 2 reduces player 1 votes' do
+    attack_player_1
+      expect(page).to have_content("Votes: 90")
+    end
+  end
 end
