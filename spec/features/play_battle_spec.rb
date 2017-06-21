@@ -11,4 +11,11 @@ describe "play.erb" do
       expect(page).to have_text("Simon")
     end
   end
+
+  feature 'Hit points' do
+    scenario 'Viewing players hit points' do
+      expect(page).to have_content("Votes: 100")
+    end
+  end
+
 end
