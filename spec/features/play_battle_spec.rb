@@ -14,4 +14,12 @@ describe "play.erb" do
     end
   end
 
+  feature 'Attacking' do
+    scenario 'Reducing player 2 votes by 10' do
+      sign_in_and_play
+      click_button "High five!"
+      expect(page).to have_content("Misses a high five!")
+    end
+  end
+
 end
