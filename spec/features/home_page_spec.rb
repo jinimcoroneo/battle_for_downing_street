@@ -1,5 +1,5 @@
 
-describe "index.erb" do
+describe "home page" do
   feature 'Entering players' do
     scenario 'Can enter their names in the appropriate fields' do
       visit('/')
